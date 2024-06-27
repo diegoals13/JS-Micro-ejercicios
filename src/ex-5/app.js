@@ -1,17 +1,12 @@
-let resultado = document.getElementById("resultado");
-let num1 = document.getElementById("num1");
-let num2 = document.getElementById("num2");
+const num1 = document.getElementById("num1");
+const num2 = document.getElementById("num2");
+const btn = document.getElementById("mostrar");
+const resultado = document.getElementById("resultado");
 
-function sabermayor(n1, n2) {
-  if (n1 > n2) {
-    resultado.innerHTML = `El número mayor es el ${n1}`;
-  } else if (n2 > n1) {
-    resultado.innerHTML = `El número mayor es el ${n2}`;
-  }
-}
 
-mostrar.addEventListener("click", () => {
-  let infonum1 = num1.value;
-  let infonum2 = num2.value;
-  sabermayor(parseInt(infonum1), parseInt(infonum2));
-});
+btn.addEventListener("click", () => {
+  const ValueOne = Number(num1.value);
+  const ValueTwo = Number(num2.value);
+  resultado.innerHTML = Math.max(ValueOne, ValueTwo);
+})
+

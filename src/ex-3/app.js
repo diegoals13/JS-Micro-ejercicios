@@ -1,18 +1,18 @@
-const inputUsername = document.getElementById("username");
-const btnValidate = document.getElementById("btn-validar");
-const mainBlock = document.querySelector("main");
+const usuario = document.getElementById("username");
+const boton = document.getElementById("boton");
+const frase = document.getElementById("frase");
 
-btnValidate.addEventListener("click", () => {
-  const username = inputUsername.value;
+boton.addEventListener("click", () => {
+  const username = usuario.value;
   render(username);
 });
 
 function render(username) {
   if (isEmpty(username)) {
-    mainBlock.innerHTML = `<span>Debe introducir su nombre</span>`;
+    frase.innerHTML = `<span>Debe introducir su nombre</span>`;
     return;
   }
-  mainBlock.innerHTML = `<span>Hola ${username}</span>`;
+  frase.innerHTML = `<span>Hola ${username}</span>`;
 }
 function isEmpty(username) {
   const stringLength = username.length;
